@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = ProyectoBanco.Client
+build_property.RootNamespace = ProyectoBanco.Client
+build_property.ProjectDir = c:\Users\pabo1\OneDrive\Desktop\ProyectoWEB\ProyectoBanco.Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\pabo1\OneDrive\Desktop\ProyectoWEB\ProyectoBanco.Client
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/InicioGerente.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lvR2VyZW50ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/InicioUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lvVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/LogInGerentes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nSW5HZXJlbnRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/RegistroConfirmarDatos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9Db25maXJtYXJEYXRvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/RegistroConfirmarGerente.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9Db25maXJtYXJHZXJlbnRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/RegistroGerente.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9HZXJlbnRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Pages/RegistroUsuario.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9Vc3VhcmlvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/pabo1/OneDrive/Desktop/ProyectoWEB/ProyectoBanco.Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4fx8ouck5u

@@ -1,0 +1,77 @@
+﻿@page "/LoginGerentes"
+@using Models
+@using Functions
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+<PageTitle>Inicia Sesion</PageTitle>
+<head>
+    <link href="css/LoginStyle.css" rel="stylesheet" />
+</head>
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-header">
+                <h1>Inicio de sesión</h1>
+                <div>Ingresa como gerente</div>
+            </div>
+            <EditForm Model="@acc" class="login-card-form" OnValidSubmit="HandleSubmit">
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <InputText type="text" @bind-Value="IdGerente" placeholder="ID de Gerente" id="emailForm" 
+                    autofocus required></InputText>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <InputText type="password" @bind-Value="Nomina" placeholder="Nomina" id="passwordForm"
+                     required></InputText>
+                </div>
+                <button type="submit">Ingresar</button>
+            </EditForm>
+            <div class="login-card-footer">
+                ¿No tienes cuenta? <a href="RegistroGerente">Regístrate</a>.
+            </div>
+        </div>
+        <div class="login-card-social">
+            <div>
+                Tambien puedes iniciar sesión como:
+            </div>
+            <div class="login-card-social-btns">
+                <a href="/">
+                    Usuario
+                </a>
+                <a href="#">
+                    Empleado
+                </a>
+            </div>
+        </div>
+    </div>
+
+@code{
+    private Gerente? acc;
+    private string? IdGerente;
+    private string? Nomina;
+    private void HandleSubmit()
+    {
+        acc = BancoClient.verifyCuentaGerente(long.Parse(IdGerente!), long.Parse(Nomina!));
+        if(acc is not null)
+        {
+            NavigationManager.NavigateTo($"/InicioGerente/{acc.IdGerente}");
+        }
+        else
+        {
+            JSRuntime.InvokeVoidAsync("alert", "Credenciales incorrectas, intente nuevamente");
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            return;
+        }
+    }
+
+        protected override void OnParametersSet()
+        {
+            acc = new()
+            {
+                IdGerente = 0,
+                Nomina = 0,
+            };
+        }
+
+}

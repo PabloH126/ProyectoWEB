@@ -1,0 +1,97 @@
+﻿@page "/Inicio/{id:int}"
+@using Models
+@using Functions
+@inject NavigationManager NavigationManager
+
+<head>
+    <link href="css/InicioStyle.css" rel="stylesheet" />
+</head>
+
+@if(user is null)
+{
+    <div class="login-card-container">
+            <div class="login-card">
+                <div class="login-card-header">
+                    <h1>Loading</h1>
+                </div>
+            </div>
+    </div>
+}
+else
+{
+    <head>
+	<!-- GOOGLE ICON -->
+	<!-- LogOut -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+	<header>
+		<div>
+			<div>
+				<a href="Historial.html">Historial de prestamos</a>	
+			</div>
+			
+			<div>
+				<a href="Solicitudes.html">Solicitar prestamo</a>
+			</div>
+			
+			<div>
+				<a href="PagarUnU.html">Pagar</a>	
+			</div>
+		</div>
+		
+		<div class="ultimo">
+			<a href="/"><span class="material-symbols-outlined">logout</span></a>
+		</div>
+	</header>
+
+	<div class="content">
+        <div>
+            <h2>Bienvenido(a) usuario @user.IdUsuario</h2>
+        </div>
+		<h1>Prestamo activo</h1>
+
+
+		<table>
+		  <tr>
+		    <th>Folio</th>
+		    <th>Monto</th>
+		    <th>Fecha de solicitud</th>
+		    <th>Fecha de aprobación</th>
+		    <th>Pago al mes</th>
+		    <th>Fecha de último pago</th>
+		    <th>Trabajador que lo aprobó</th>
+		  </tr>
+
+		  <tr>
+
+		    <td>Celda 4</td>
+
+		    <td>Celda 5</td>
+
+		    <td>Celda 6</td>
+
+		  </tr>
+
+		</table>
+	</div>
+    <!--abla que tenga los componentes de folio, monto, fecha de solicitud, fecha de aprobacion, pago al mes, fecha de ultimo pago, y trabajador que lo aprobo -->
+}
+@code {
+    [Parameter]
+    public int? Id {get; set;}
+    public Dato? data;
+    public Usuario? user;
+
+    protected override void OnParametersSet()
+    {
+        if(Id is not null)
+        {
+            Usuario foundUser = BancoClient.getUsuario(Id.Value);
+            user = new()
+            {
+                IdUsuario = foundUser.IdUsuario,
+                DetallesU = foundUser.DetallesU,
+            };
+        }
+    }
+}

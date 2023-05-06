@@ -1,0 +1,85 @@
+﻿@page "/RegistroGerente/{id:int}"
+@using Models
+@inject NavigationManager NavigationManager
+
+<head>
+    <link href="css/LoginStyle.css" rel="stylesheet" />
+</head>
+
+@if(data is null)
+{
+    <div class="login-card-container">
+            <div class="login-card">
+                <div class="login-card-header">
+                    <h1>Loading</h1>
+                </div>
+            </div>
+    </div>
+}
+else
+{
+    <div class="login-card-container">
+            <div class="login-card">
+                <div class="login-card-header">
+                    <h1>Registro</h1>
+                    <div>Datos ingresados</div>
+                </div>
+                <EditForm Model="@data" class="login-card-form" OnValidSubmit="HandleSubmit">
+                    <div class="form-item">
+                        <p id="emailForm" required> Nombre: <b>@data.Nombres</b></p>
+                        <p id="passwordForm" required>Apellido paterno: <b>@data.ApellidoP</b></p>
+                        <p id="emailForm" required>Apellido materno: <b>@data.ApellidoM</b></p>
+                        <p id="emailForm" required>Dia de nacimiento: <b>@data.Dia</b></p>
+                        <p id="emailForm" required>Mes de nacimiento: <b>@data.Mes</b></p>
+                        <p id="emailForm" required>Año de nacimiento: <b>@data.Año</b></p>
+                        <p id="emailForm" required>ID de Gerente: <b>@user!.IdGerente</b></p>
+                        <p id="emailForm" required>Número de nomina: <b>@user!.Nomina</b></p>
+                    </div>
+                    <button type="submit">Regresar a inicio</button>
+                </EditForm>
+            </div>
+        </div>
+}
+
+@code {
+    [Parameter]
+    public int? Id {get; set;}
+    private DetallesGerente? detallesG;
+    private Dato? data;
+    private Gerente? user;
+    private void HandleSubmit()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+    protected override void OnParametersSet()
+    {
+        if(Id is not null)
+        {
+            DetallesGerente foundDetalles = BancoClient.getDetallesG(Id.Value);
+            detallesG = new()
+            {
+                DetallesG = foundDetalles.DetallesG,
+            };
+
+            Dato foundData = BancoClient.getDato(Id.Value);
+            data = new()
+            {
+                IdDatos = foundData.IdDatos,
+                Nombres = foundData.Nombres,
+                ApellidoP = foundData.ApellidoP,
+                ApellidoM = foundData.ApellidoM,
+                Dia = foundData.Dia,
+                Mes = foundData.Mes,
+                Año = foundData.Año
+            };
+
+            Gerente foundUser = BancoClient.getGerente(Id.Value);
+            user = new()
+            {
+                IdGerente = foundUser.IdGerente,
+                Nomina = foundUser.Nomina,
+                DetallesG = foundUser.DetallesG
+            };
+        }
+    }
+}

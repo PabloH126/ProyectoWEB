@@ -1,0 +1,80 @@
+﻿@page "/"
+@using Models
+@using Functions
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+<PageTitle>Inicia Sesion</PageTitle>
+<head>
+    <link href="css/LoginStyle.css" rel="stylesheet" />
+</head>
+
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-header">
+                <h1>Inicio de sesión</h1>
+                <div>Ingresa como usuario</div>
+            </div>
+            <EditForm Model="@acc" class="login-card-form" OnValidSubmit="HandleSubmit">
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <InputText type="text" @bind-Value="acc!.IdUsuario" placeholder="Ingresa usuario" id="emailForm" 
+                    autofocus required></InputText>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <InputText type="password" @bind-Value="acc!.Contraseña" placeholder="Ingresa password" id="passwordForm"
+                     required></InputText>
+                </div>
+                <button type="submit">Ingresar</button>
+            </EditForm>
+            <div class="login-card-footer">
+                ¿No tienes cuenta? <a href="RegistroUsuario">Regístrate</a>.
+            </div>
+        </div>
+        <div class="login-card-social">
+            <div>
+                Tambien puedes iniciar sesión como:
+            </div>
+            <div class="login-card-social-btns">
+                <a href="LoginGerentes">
+                    Gerente
+                </a>
+                <a href="#">
+                    Empleado
+                </a>
+            </div>
+        </div>
+    </div>
+
+@code{
+    private Cuentum? acc;
+
+    private void HandleSubmit()
+    {
+        acc = BancoClient.verifyCuentaUsuario(acc!.IdUsuario!, acc!.Contraseña!);
+        if(acc is not null)
+        {
+
+            NavigationManager.NavigateTo($"/Inicio/{acc!.DetallesC}");
+        }
+        else
+        {
+            JSRuntime.InvokeVoidAsync("alert", "Credenciales incorrectas, intente nuevamente");
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            return;
+        }
+    }
+
+        protected override void OnParametersSet()
+        {
+            acc = new()
+            {
+                IdUsuario = string.Empty,
+                Contraseña = string.Empty,
+            };
+        }
+
+}
+
+

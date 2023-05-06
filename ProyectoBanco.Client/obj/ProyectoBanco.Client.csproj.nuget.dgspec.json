@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj",
+        "projectName": "ProyectoBanco.Client",
+        "projectPath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj",
+        "packagesPath": "C:\\Users\\pabo1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pabo1\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Toolbelt.Blazor.LocalizedDataAnnotationsValidator": {
+              "target": "Package",
+              "version": "[1.0.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[7.0.5, 7.0.5]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

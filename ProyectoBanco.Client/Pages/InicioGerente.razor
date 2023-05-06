@@ -1,0 +1,53 @@
+﻿@page "/InicioGerente/{id:int}"
+@using Models
+@using Functions
+@inject NavigationManager NavigationManager
+
+@if(gerente is null)
+{
+    <div class="login-card-container">
+            <div class="login-card">
+                <div class="login-card-header">
+                    <h1>Loading</h1>
+                </div>
+            </div>
+    </div>
+}
+else
+{
+    <h1>Bienvenido(a) gerente @data!.Nombres</h1>
+}
+
+@code {
+    [Parameter]
+    public int? Id {get; set;}
+    public Dato? data;
+    public Gerente? gerente;
+
+    protected override void OnParametersSet()
+    {
+        if(Id is not null)
+        {
+            Gerente foundGerente = BancoClient.getGerente(Id.Value);
+            gerente = new()
+            {
+                IdGerente = foundGerente.IdGerente,
+                Nomina = foundGerente.Nomina,
+                DetallesG = foundGerente.DetallesG
+            };
+
+            Dato foundData = BancoClient.getDato(Id.Value);
+            data = new()
+            {
+                IdDatos = foundData.IdDatos,
+                Nombres = foundData.Nombres,
+                ApellidoP = foundData.ApellidoP,
+                ApellidoM = foundData.ApellidoM,
+                Dia = foundData.Dia,
+                Mes = foundData.Mes,
+                Año = foundData.Año
+            };
+        }
+    } 
+    
+}

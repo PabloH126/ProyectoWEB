@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "cWQ8W5RuVeJU/0EwhqPX0Y1lPdaE36HtLePmyj0UTQn7nS4j3mBSpXEH6rShV6Rl5y2hQ4gUCGGL47WqO3LG6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\build.proj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pabo1\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\pabo1\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.3\\microsoft.netframework.referenceassemblies.net45.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

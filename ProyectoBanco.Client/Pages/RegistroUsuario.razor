@@ -1,0 +1,129 @@
+﻿@page "/RegistroUsuario"
+@using Models
+@using Functions
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Registro</PageTitle>
+<head>
+    <link href="css/LoginStyle.css" rel="stylesheet" />
+</head>
+
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-header">
+                <h1>Registro</h1>
+                <div>Registrar usuario</div>
+            </div>
+            <EditForm Model="@data" class="login-card-form" OnValidSubmit="HandleSubmit">
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <InputText type="text" @bind-Value="data!.Nombres" placeholder="Nombre completo" id="emailForm" autofocus required></InputText>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <InputText type="text" @bind-Value="data.ApellidoP" placeholder="Apellido paterno" id="passwordForm" required></InputText>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">person</span>
+                    <InputText type="text" @bind-Value="data.ApellidoM" placeholder="Apellido materno" id="emailForm"  required></InputText>
+                </div>
+
+                <div class="fecha">
+
+                    <InputSelect class="input-fecha" @bind-Value="data.Dia" title="Fecha de nacimiento necesaria para el registro" required>
+                        <option selected value="">Dia</option>
+                        @{
+                            for(int i = 1; i < 32; i++)
+                            {
+                                <option>@i</option>
+                            }
+                        }
+                    </InputSelect>
+                    <InputSelect class="input-fecha" @bind-Value="data.Mes" title="Fecha de nacimiento necesaria para el registro" required>
+                        <option selected value="">Mes</option>
+                        <option value="01">Enero</option>
+                        <option value="02">Febrero</option>
+                        <option value="03">Marzo</option>
+                        <option value="04">Abril</option>
+                        <option value="05">Mayo</option>
+                        <option value="06">Junio</option>
+                        <option value="07">Julio</option>
+                        <option value="08">Agosto</option>
+                        <option value="09">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </InputSelect>
+                    <InputSelect class="input-fecha" @bind-Value="data.Año" title="Fecha de nacimiento necesaria para el registro" required>
+                        <option selected value="">Año</option>
+                        @for(int i = 2023; i > 1961; i--)
+                            {
+                                <option>@i</option>
+                            }
+                    </InputSelect>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">demography</span>
+                    <InputText type="text" @bind-Value="curp" placeholder="CURP" id="emailForm"  required></InputText>
+                </div>
+                <button type="submit">Registrarse</button>
+            </EditForm>
+            <div class="login-card-footer">
+                ¿Tienes cuenta? <a href="#">Ingresa con tu cuenta</a>.
+            </div>
+        </div>
+        <div class="login-card-social">
+            <div>
+                Tambien puedes registrarte como:
+            </div>
+            <div class="login-card-social-btns">
+                <a href="RegistroGerente">
+                    Gerente
+                </a>
+            </div>
+        </div>
+    </div>
+
+@code {
+    private Dato? data;
+    private string? curp;
+
+    private void HandleSubmit()
+    {
+        if(ValidarCurp.CheckNumeros(data!.Nombres!, data.ApellidoP!, data.ApellidoM!))
+        {
+            if(ValidarCurp.validarCurp(curp!, data!.Nombres!, data.ApellidoP!, data.ApellidoM!, data.Dia!, data.Mes!, data.Año!))
+            {
+                BancoClient.AddUsuario(data!, curp!);
+                NavigationManager.NavigateTo($"/RegistroUsuario/{data.IdDatos}");
+            }
+            else
+            {
+                JSRuntime.InvokeVoidAsync("alert", "El curp es invalido, ingresa nuevamente");
+                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+                return;
+            }
+        }
+        else
+        {
+            JSRuntime.InvokeVoidAsync("alert", "El nombre no debe contener números, ingresa nuevamente");
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            return;
+        }
+    }
+        protected override void OnParametersSet()
+        {
+            data = new()
+            {
+                Nombres = string.Empty,
+                ApellidoP = string.Empty,
+                ApellidoM = string.Empty,
+                Dia = string.Empty,
+                Mes = string.Empty,
+                Año = string.Empty
+            };
+        }
+}
+
+
