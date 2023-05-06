@@ -3,7 +3,11 @@
 @using Functions
 @inject NavigationManager NavigationManager
 
-@if(gerente is null)
+<head>
+    <link href="css/InicioStyle.css" rel="stylesheet" />
+</head>
+
+@if(manager is null)
 {
     <div class="login-card-container">
             <div class="login-card">
@@ -15,39 +19,91 @@
 }
 else
 {
-    <h1>Bienvenido(a) gerente @data!.Nombres</h1>
-}
+    <head>
+	<!-- GOOGLE ICON -->
+	<!-- LogOut -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+	<header>
+		<div>
+			<div>
+				<a href="Solicitudes registro.html">Solicitudes registro</a>	
+			</div>
+			
+			<div>
+				<a href="Solicitudes.html">Empleados</a>
+			</div>
+		</div>
+		
+		<div class="ultimo">
+			<a href="/"><span class="material-symbols-outlined">logout</span></a>
+		</div>
+	</header>
 
+	<div class="content">
+        <div>
+            <h2>Bienvenido(a) gerente @data!.Nombres</h2>
+        </div>
+		<h1>Solicitudes de prestamo</h1>
+
+
+		<table>
+		  <tr>
+		    <th>Folio</th>
+		    <th>Monto</th>
+		    <th>Fecha de solicitud</th>
+		    <th>Fecha de aprobación</th>
+            <th>Periodo (meses)</th>
+		    <th>Pago al mes</th>
+		    <th>Fecha de último pago</th>
+            <th># de cuenta solicitante</th>
+		    <th>Trabajador que lo aprobó</th>
+            <th>Status</th>
+		  </tr>
+
+		  <tr>
+		    <td>Celda 4</td>
+		    <td>Celda 5</td>
+		    <td>Celda 6</td>
+		    <td>Celda 4</td>
+		    <td>Celda 5</td>
+		    <td>Celda 6</td>
+		    <td>Celda 4</td>
+		    <td>Celda 5</td>
+		    <td>Celda 6</td>
+		    <td>Celda 6</td>
+		  </tr>
+
+		</table>
+	</div>
+    <!--abla que tenga los componentes de folio, monto, fecha de solicitud, fecha de aprobacion, pago al mes, fecha de ultimo pago, y trabajador que lo aprobo -->
+}
 @code {
     [Parameter]
     public int? Id {get; set;}
     public Dato? data;
-    public Gerente? gerente;
+    public Gerente? manager;
 
     protected override void OnParametersSet()
     {
         if(Id is not null)
         {
-            Gerente foundGerente = BancoClient.getGerente(Id.Value);
-            gerente = new()
+            Gerente foundManager = BancoClient.getGerente(Id.Value);
+            manager = new()
             {
-                IdGerente = foundGerente.IdGerente,
-                Nomina = foundGerente.Nomina,
-                DetallesG = foundGerente.DetallesG
+                IdGerente = foundManager.IdGerente,
+                Nomina = foundManager.Nomina,
+                DetallesG = foundManager.DetallesG
             };
 
             Dato foundData = BancoClient.getDato(Id.Value);
             data = new()
             {
-                IdDatos = foundData.IdDatos,
                 Nombres = foundData.Nombres,
                 ApellidoP = foundData.ApellidoP,
-                ApellidoM = foundData.ApellidoM,
-                Dia = foundData.Dia,
-                Mes = foundData.Mes,
-                Año = foundData.Año
+                ApellidoM = foundData.ApellidoM
             };
+
         }
-    } 
-    
+    }
 }
