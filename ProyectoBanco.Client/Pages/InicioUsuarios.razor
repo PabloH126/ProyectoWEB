@@ -1,10 +1,14 @@
-﻿@page "/Inicio/{id:int}"
+﻿@page "/Inicio"
 @using Models
 @using Functions
 @inject NavigationManager NavigationManager
+@inject ProyectoBanco.Client.Services.UsuarioService userDataService
 
 <head>
     <link href="css/InicioStyle.css" rel="stylesheet" />
+	<!-- GOOGLE ICON -->
+	<!-- LogOut -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 @if(user is null)
@@ -19,11 +23,6 @@
 }
 else
 {
-    <head>
-	<!-- GOOGLE ICON -->
-	<!-- LogOut -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
 	<header>
 		<div>
 			<div>
@@ -77,21 +76,12 @@ else
     <!--abla que tenga los componentes de folio, monto, fecha de solicitud, fecha de aprobacion, pago al mes, fecha de ultimo pago, y trabajador que lo aprobo -->
 }
 @code {
-    [Parameter]
-    public int? Id {get; set;}
-    public Dato? data;
+    private long? Id;
     public Usuario? user;
 
-    protected override void OnParametersSet()
-    {
-        if(Id is not null)
-        {
-            Usuario foundUser = BancoClient.getUsuario(Id.Value);
-            user = new()
-            {
-                IdUsuario = foundUser.IdUsuario,
-                DetallesU = foundUser.DetallesU,
-            };
-        }
+    protected override async Task OnInitializedAsync()
+	{
+		var userData = await userDataService.GetUserDataAsync();
+		Id = userData.DetallesU;
     }
 }

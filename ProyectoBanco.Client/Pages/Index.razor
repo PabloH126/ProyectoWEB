@@ -55,8 +55,8 @@
         acc = BancoClient.verifyCuentaUsuario(acc!.IdUsuario!, acc!.Contraseña!);
         if(acc is not null)
         {
-
-            NavigationManager.NavigateTo($"/Inicio/{acc!.DetallesC}");
+            JSRuntime.InvokeVoidAsync("localStorage.setItem", "UserID", acc.DetallesC);
+            NavigationManager.NavigateTo("/Inicio");
         }
         else
         {
