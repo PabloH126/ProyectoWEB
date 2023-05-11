@@ -2164,19 +2164,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PABLOPC\\.nuget\\packages\\": {}
+    "C:\\Users\\pabo1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj",
+      "projectUniqueName": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj",
       "projectName": "ProyectoBanco.Client",
-      "projectPath": "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj",
-      "packagesPath": "C:\\Users\\PABLOPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\obj\\",
+      "projectPath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\ProyectoBanco.Client.csproj",
+      "packagesPath": "C:\\Users\\pabo1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PABLOPC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\pabo1\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

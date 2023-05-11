@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj": {}
+    "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj": {
+    "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj",
+        "projectUniqueName": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj",
         "projectName": "ProyectoBanco.Server",
-        "projectPath": "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj",
-        "packagesPath": "C:\\Users\\PABLOPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PABLOPC\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\obj\\",
+        "projectPath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\ProyectoBanco.Server.csproj",
+        "packagesPath": "C:\\Users\\pabo1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pabo1\\OneDrive\\Desktop\\ProyectoWEB\\ProyectoBanco.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PABLOPC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\pabo1\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -40,7 +40,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.2, )"
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.Build.Traversal": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
