@@ -142,6 +142,139 @@
         }
       },
       {
+        "HashCode": 1871743511,
+        "Kind": "Components.Component",
+        "Name": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
+        "AssemblyName": "ProyectoBanco.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RegistroConfirmarGerente"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int32?",
+            "Metadata": {
+              "Common.PropertyName": "Id",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32?"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
+          "Common.TypeNameIdentifier": "RegistroConfirmarGerente",
+          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1535507631,
+        "Kind": "Components.Component",
+        "Name": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
+        "AssemblyName": "ProyectoBanco.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int32?",
+            "Metadata": {
+              "Common.PropertyName": "Id",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32?"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
+          "Common.TypeNameIdentifier": "RegistroConfirmarGerente",
+          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -268228219,
+        "Kind": "Components.Component",
+        "Name": "ProyectoBanco.Client.Pages.RegistroUsuario",
+        "AssemblyName": "ProyectoBanco.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RegistroUsuario"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroUsuario",
+          "Common.TypeNameIdentifier": "RegistroUsuario",
+          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1018422508,
+        "Kind": "Components.Component",
+        "Name": "ProyectoBanco.Client.Pages.RegistroUsuario",
+        "AssemblyName": "ProyectoBanco.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProyectoBanco.Client.Pages.RegistroUsuario"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroUsuario",
+          "Common.TypeNameIdentifier": "RegistroUsuario",
+          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1144845716,
+        "Kind": "Components.Component",
+        "Name": "ProyectoBanco.Client.Pages.LogInGerentes",
+        "AssemblyName": "ProyectoBanco.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LogInGerentes"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ProyectoBanco.Client.Pages.LogInGerentes",
+          "Common.TypeNameIdentifier": "LogInGerentes",
+          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1576442012,
+        "Kind": "Components.Component",
+        "Name": "ProyectoBanco.Client.Pages.LogInGerentes",
+        "AssemblyName": "ProyectoBanco.Client",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProyectoBanco.Client.Pages.LogInGerentes"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ProyectoBanco.Client.Pages.LogInGerentes",
+          "Common.TypeNameIdentifier": "LogInGerentes",
+          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
         "HashCode": -80160393,
         "Kind": "Components.Component",
         "Name": "ProyectoBanco.Client.Pages.Index",
@@ -275,37 +408,37 @@
         }
       },
       {
-        "HashCode": 1144845716,
+        "HashCode": -450206573,
         "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.LogInGerentes",
+        "Name": "ProyectoBanco.Client.Pages.RegistroGerente",
         "AssemblyName": "ProyectoBanco.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "LogInGerentes"
+            "TagName": "RegistroGerente"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.LogInGerentes",
-          "Common.TypeNameIdentifier": "LogInGerentes",
+          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroGerente",
+          "Common.TypeNameIdentifier": "RegistroGerente",
           "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
           "Runtime.Name": "Components.IComponent"
         }
       },
       {
-        "HashCode": -1576442012,
+        "HashCode": -490036583,
         "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.LogInGerentes",
+        "Name": "ProyectoBanco.Client.Pages.RegistroGerente",
         "AssemblyName": "ProyectoBanco.Client",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ProyectoBanco.Client.Pages.LogInGerentes"
+            "TagName": "ProyectoBanco.Client.Pages.RegistroGerente"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.LogInGerentes",
-          "Common.TypeNameIdentifier": "LogInGerentes",
+          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroGerente",
+          "Common.TypeNameIdentifier": "RegistroGerente",
           "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
@@ -365,139 +498,6 @@
         "Metadata": {
           "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroConfirmarDatos",
           "Common.TypeNameIdentifier": "RegistroConfirmarDatos",
-          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 1871743511,
-        "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
-        "AssemblyName": "ProyectoBanco.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RegistroConfirmarGerente"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.Int32?",
-            "Metadata": {
-              "Common.PropertyName": "Id",
-              "Common.GloballyQualifiedTypeName": "global::System.Int32?"
-            }
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
-          "Common.TypeNameIdentifier": "RegistroConfirmarGerente",
-          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1535507631,
-        "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
-        "AssemblyName": "ProyectoBanco.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Id",
-            "TypeName": "System.Int32?",
-            "Metadata": {
-              "Common.PropertyName": "Id",
-              "Common.GloballyQualifiedTypeName": "global::System.Int32?"
-            }
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroConfirmarGerente",
-          "Common.TypeNameIdentifier": "RegistroConfirmarGerente",
-          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -450206573,
-        "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.RegistroGerente",
-        "AssemblyName": "ProyectoBanco.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RegistroGerente"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroGerente",
-          "Common.TypeNameIdentifier": "RegistroGerente",
-          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -490036583,
-        "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.RegistroGerente",
-        "AssemblyName": "ProyectoBanco.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ProyectoBanco.Client.Pages.RegistroGerente"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroGerente",
-          "Common.TypeNameIdentifier": "RegistroGerente",
-          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -268228219,
-        "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.RegistroUsuario",
-        "AssemblyName": "ProyectoBanco.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RegistroUsuario"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroUsuario",
-          "Common.TypeNameIdentifier": "RegistroUsuario",
-          "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1018422508,
-        "Kind": "Components.Component",
-        "Name": "ProyectoBanco.Client.Pages.RegistroUsuario",
-        "AssemblyName": "ProyectoBanco.Client",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ProyectoBanco.Client.Pages.RegistroUsuario"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ProyectoBanco.Client.Pages.RegistroUsuario",
-          "Common.TypeNameIdentifier": "RegistroUsuario",
           "Common.TypeNamespace": "ProyectoBanco.Client.Pages",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
